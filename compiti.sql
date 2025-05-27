@@ -1,6 +1,6 @@
 -- 1
 
-select concat_ws(' ', c.first_name, c.last_name) as full_name, count(rental_id) as times_movie_rented
+select concat_ws(' ', c.first_name, c.last_name) as full_name, count(r.rental_id) as times_movie_rented
 from customer as c
 join rental as r on r.customer_id = c.customer_id
 group by c.customer_id
